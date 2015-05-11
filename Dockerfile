@@ -15,8 +15,7 @@ RUN wget -q -O /usr/bin/lein \
     && chmod +x /usr/bin/lein && \
     lein
     
-RUN echo "Australia/Melbourne" | sudo tee /etc/timezone
-Australia/Melbourne &&\
+RUN echo "Australia/Melbourne" | sudo tee /etc/timezone &&\
 dpkg-reconfigure --frontend noninteractive tzdata
 
 CMD ["bash"]
